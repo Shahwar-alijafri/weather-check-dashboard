@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirScope - Live Weather & AQI Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h2>🌤️ AirScope</h2>
+      <p>Real-Time Weather & Air Quality Monitor</p>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Search city (e.g., Delhi, Mumbai, London)...">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Status Message (Loading / Error) -->
+    <div id="status-msg" class="status-msg hidden"></div>
+
+    <!-- Weather & AQI Content -->
+    <div id="weather-card" class="weather-card hidden">
+      <div class="weather-header">
+        <div>
+          <h3 id="city-name">Delhi, IN</h3>
+          <p id="weather-desc">Haze</p>
+        </div>
+        <div class="temp-badge">
+          <span id="temp-val">28</span>°C
+        </div>
+      </div>
+
+      <!-- Weather Stats Grid -->
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <span class="metric-label">Feels Like</span>
+          <strong id="feels-like">30°C</strong>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Humidity</span>
+          <strong id="humidity">65%</strong>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Wind Speed</span>
+          <strong id="wind-speed">12 km/h</strong>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Pressure</span>
+          <strong id="pressure">1012 hPa</strong>
+        </div>
+      </div>
+
+      <!-- AQI Highlight Box -->
+      <div class="aqi-panel">
+        <div class="aqi-header">
+          <span>Air Quality Index (AQI)</span>
+          <span id="aqi-badge" class="aqi-badge moderate">Moderate</span>
+        </div>
+        <p id="aqi-health-advice">Air quality is acceptable for most people.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
